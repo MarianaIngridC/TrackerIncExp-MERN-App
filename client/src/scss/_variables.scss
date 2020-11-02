@@ -1,0 +1,44 @@
+// colores
+$color-white: #f7f7f7;
+$color-white-two: #fff;
+$color-black: #333;
+
+$color-grey-dark: #bbb;
+$color-grey-light: #dedede;
+$color-green: #2ecc71;
+$color-red: #c0392b;
+$color-blue: #5848ee;
+$color-blue-dark: #2714ce;
+
+
+// Media Query - Mobile First
+// Media Query Break Points
+
+$screen-sm-min: 600px;
+$screen-md-min: 801px;
+$screen-lg-min: 1025px;
+@media (min-width:600px) { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (min-width:801px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+// mixins
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content
+    }
+};
+
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content
+    }
+};
+
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content
+    }
+};
+
+
+
+
