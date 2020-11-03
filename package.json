@@ -6,7 +6,7 @@
     "start": "node src/server.js",
     "server": "nodemon src/server.js",
     "client-install": "cd client && yarn install client",
-    "client": "cd client && yarn install & yarn run client",
+    "client": "cd client && yarn run client",
     "dev": "concurrently \"yarn run server\" \"yarn run client\"",
     "heroku-postbuild": "cd client && yarn install && yarn run build"
   },
