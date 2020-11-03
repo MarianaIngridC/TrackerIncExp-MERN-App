@@ -2,17 +2,17 @@
   "name": "back",
   "version": "1.0.0",
   "main": "server",
-  "scripts" : {
+  "scripts": {
     "start": "node src/server.js",
     "server": "nodemon src/server.js",
     "client-install": "cd client && yarn install client",
     "client": "yarn run client",
     "dev": "concurrently \"yarn run server\" \"yarn run client\"",
     "heroku-postbuild": "cd client && yarn install && yarn run build"
-    
   },
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.10.11",
