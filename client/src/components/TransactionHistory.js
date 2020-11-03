@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useRef } from 'react'
 import { GlobalContext } from '../context/GlobalState';
 import Chart from 'chart.js';
-import {jsPDF} from 'jspdf';
 
 
 export const TransactionHistory = () => {
@@ -14,76 +13,15 @@ export const TransactionHistory = () => {
     const data = transactions.forEach(transaction => {
         total===transaction.amount ? pu.push(transaction.amount) : pu.push(transaction.amount)
     });
-    // transactions.map(transaction => total===transaction.amount ? pu.push(transaction.amount) : pu.push(total+transaction.amount))
-    console.log(pu)
-    console.log(pu)
-
-        // if(total=0){ transaction.amount }
-        // else (total > 0){ total+transaction.amount}
-        // // else{ total+transaction.amount } 
-        
-        // total - (total + transaction.amount))
-    // const data = transactions.map(transaction =>{ 
-    //     const amount = transaction.map(transacc => transacc.amount)
-
-    //     const total = amount.reduce((acc, item) =>(acc += item), 0)
-        
-    //    return total - (transaction.amount)});
-    //    console.log(data)
-    // const total = amounts.reduce((acc, item) =>(acc += item), 0)
-    // const valores = dataChart()
-    // const saldo = amounts.reduce((acc, item) =>(acc += item), 0)
-    // const values = []
-    // for(values in saldo){
-    //     values.push(
-    //         saldo
-    //     )
-    // }
-    // console.log(values)
-    // function dataChart(){
-
-    //     if( total >= 0) {
-    //     var values=[]
-
-    //         if( transactions.amount > 0){
-    //             values = total + transactions.amount
-    //             // .map(transaction => parseInt(transaction.amount))        
-    //         }else{
-    //             // (transactions.amount < 0){
-    //             const values = total - transactions.amount 
-    //         }
-    //         };
-
-    //         values = ''
-    //     // const values = transactions.map(transaction => parseInt(transaction.amount)) 
-        
-            // return values
-    const download = () => {
-        // var doc = new jsPDF();
-        // var elementHTML = getElementById('root').html();
     
-        // doc.fromHTML(elementHTML, 15, 15, {
-        //     'width': 170,
-        //     'elementHandlers': specialElementHandlers
-        // });
-        
-        // // Save the PDF
-        // doc.save('misTransacciones.pdf');   
+    const download = () => {
+          
             document.title='';
             document.footer='';
             document.header='';
             window.print();
             }
-    //     var doc = new jsPDF({orientation: 'p', 
-    //         unit: 'in', 
-    //         format: [1000, 1500]});   
-
-    //     doc.html(document.getElementById('root'), {
-    //     callback: function (doc) {
-    //         doc.save('misTransacciones.pdf');
-    //     }
-    //     });     
-    // }  
+  
     useEffect(() => {
         const myChartRef = chartRef.current.getContext('2d')
         var myChart = new Chart(myChartRef,{
@@ -140,14 +78,6 @@ export const TransactionHistory = () => {
                     }
                 },
                 scales: { 
-                    
-                    // xAxes: [{ 
-                    //     ticks: { 
-                    //     suggestedMin: 0,
-                    //      beginAtZero: true 
-                    //     } 
-                    //    }] 
-                    //   ,
                     yAxes: [{ 
                      ticks: { 
                         // suggestedMin: 0,
