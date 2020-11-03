@@ -36,6 +36,6 @@ if(process.env.NODE_ENV === 'production'){
     app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html')))
 }
 
-app.listen(process.env.PORT, () => {
-    console.log(`El servidor esta corriendo en el puerto ${process.env.PORT}`)
+app.listen(port, () => {
+    console.log(`El servidor esta corriendo en el puerto ${port}`)
 })
