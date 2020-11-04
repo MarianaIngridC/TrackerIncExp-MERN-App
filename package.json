@@ -8,7 +8,7 @@
     "client-install": "yarn install --prefix client",
     "client": "yarn start --prefix client",
     "dev": "concurrently \"yarn run server\" \"yarn run client\"",
-    "heroku-postbuild": "cd client yarn start && yarn install -production=false && yarn run build"
+    "heroku-postbuild": "cd client yarn start && yarn install"
   },
   "license": "MIT",
   "dependencies": {
