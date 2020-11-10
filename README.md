@@ -6,17 +6,21 @@ Full-stack Income and Expense Tracker web app built with the MERN stack.
 
 This project uses the following technologies:
 
+
 * React and React Router for the frontend
 * Express and Node for the backend
 * MongoDB for the database
 * SASS
 
 And the following tools:
+
 * Webpack
 * babel
 
 
 Installation
+
+
 // Run client & server with concurrently
 yarn run dev
 
