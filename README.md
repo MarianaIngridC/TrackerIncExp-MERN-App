@@ -1,5 +1,4 @@
-Tracker of Incomes and Expenses Web App
-
+TRACKER OF INCOME AND EXPENSES WEB APP 
 
  This web application gives the final balance, as a result of the incomes and expenses wich is provided by the user
 Full-stack Income and Expense Tracker web app built with the MERN stack.
@@ -18,10 +17,12 @@ And the following tools:
 * babel
 
 
-Installation
+INSTALLATION
 
 
 // Run client & server with concurrently
+
+
 yarn run dev
 
 // Server runs on http://localhost:2000 and client on http://localhost:4000
